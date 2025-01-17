@@ -10,6 +10,12 @@ function isValidPassword(password) {
     if(!specialCharacters.test(password)) {
         return false
     }
+
+    //Check if the password contains a number
+    const numbers = /[0-9]/;
+    if(!numbers.test(password)) {
+        return false;
+    }
     return true;
 }
 
