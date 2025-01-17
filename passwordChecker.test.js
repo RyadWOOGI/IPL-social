@@ -14,6 +14,10 @@ test('password without number should be invalid', () => {
 
 test('password that contain ipl should be invalid', () => {
     expect(isValidPassword('WOOGIIPL')).toBe(false);
+    expect(isValidPassword('WOOGIIpL')).toBe(false);
+    expect(isValidPassword('WOOGIIpl')).toBe(false);
+    expect(isValidPassword('WOOGIipl')).toBe(false);
+
 });
 
 test('password without any fail should be valid', () => {

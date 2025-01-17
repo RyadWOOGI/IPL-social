@@ -16,6 +16,13 @@ function isValidPassword(password) {
     if(!numbers.test(password)) {
         return false;
     }
+
+    //Check if the password contains 'ipl'
+    const containsIPL = /ipl/i;
+    if(containsIPL.test(password)) {
+        return false;
+    }
+
     return true;
 }
 
